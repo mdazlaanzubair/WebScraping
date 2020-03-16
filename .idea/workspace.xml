@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1909453f-b901-49a2-b220-b2970f213200" name="Default Changelist" comment="" />
+    <list default="true" id="1909453f-b901-49a2-b220-b2970f213200" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scrap.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrap.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +18,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ZCfOrbNyj8Ft43OVNem8N7FIXE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,6 +30,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
@@ -78,25 +87,25 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1579" height="226" key="GridCell.Tab.0.bottom" timestamp="1584357721353">
+    <state width="1579" height="308" key="GridCell.Tab.0.bottom" timestamp="1584384099485">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1579" height="226" key="GridCell.Tab.0.bottom/0.0.1600.870@0.0.1600.870" timestamp="1584357721353" />
-    <state width="1579" height="226" key="GridCell.Tab.0.center" timestamp="1584357721353">
+    <state width="1579" height="308" key="GridCell.Tab.0.bottom/0.0.1600.870@0.0.1600.870" timestamp="1584384099485" />
+    <state width="1579" height="308" key="GridCell.Tab.0.center" timestamp="1584384099484">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1579" height="226" key="GridCell.Tab.0.center/0.0.1600.870@0.0.1600.870" timestamp="1584357721353" />
-    <state width="1579" height="226" key="GridCell.Tab.0.left" timestamp="1584357721353">
+    <state width="1579" height="308" key="GridCell.Tab.0.center/0.0.1600.870@0.0.1600.870" timestamp="1584384099484" />
+    <state width="1579" height="308" key="GridCell.Tab.0.left" timestamp="1584384099484">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1579" height="226" key="GridCell.Tab.0.left/0.0.1600.870@0.0.1600.870" timestamp="1584357721353" />
-    <state width="1579" height="226" key="GridCell.Tab.0.right" timestamp="1584357721353">
+    <state width="1579" height="308" key="GridCell.Tab.0.left/0.0.1600.870@0.0.1600.870" timestamp="1584384099484" />
+    <state width="1579" height="308" key="GridCell.Tab.0.right" timestamp="1584384099484">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1579" height="226" key="GridCell.Tab.0.right/0.0.1600.870@0.0.1600.870" timestamp="1584357721353" />
-    <state x="301" y="78" key="SettingsEditor" timestamp="1584356903181">
+    <state width="1579" height="308" key="GridCell.Tab.0.right/0.0.1600.870@0.0.1600.870" timestamp="1584384099484" />
+    <state x="301" y="78" key="SettingsEditor" timestamp="1584380746031">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state x="301" y="78" key="SettingsEditor/0.0.1600.870@0.0.1600.870" timestamp="1584356903181" />
+    <state x="301" y="78" key="SettingsEditor/0.0.1600.870@0.0.1600.870" timestamp="1584380746031" />
   </component>
 </project>

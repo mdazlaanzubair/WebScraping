@@ -1,12 +1,29 @@
-import urllib.request
-import urllib.parse
-import re
+import requests
+from bs4 import BeautifulSoup
 
-url = "https://patient.info/forums/index-a"
+url = "https://patient.info"
+pointer = "/forums/index-f"
+# GRABBING PLAIN CONTENT FROM WEB
+plainContent = requests.get(url + pointer)
 
-req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-resp = urllib.request.urlopen(req)
+# CONVERTING PLAIN CONTENT TO HTML CONTENT
+htmlContent = plainContent.content
 
-respData = resp.read()
+# PARSING HTML CONTENT
+soup = BeautifulSoup(htmlContent, 'html.parser')
 
-print(respData)
+# GETTING LINKS OF CATEGORY
+get_anchors_table = soup.find('table', class_='table')
+
+i = 0
+anchorsList = []
+for anchor in get_anchors_table.find_all('a'):
+    i += 1
+    data = {
+             'id': i,
+             'title': anchor.text,
+             'link': url+anchor.get("href")
+            }
+    anchorsList.append(data)
+
+print(anchorsList)
