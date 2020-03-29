@@ -1,5 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
+import json
+import os
 
 
 # FUNCTION TO GRAB PAGE SOURCE OF THE POINTED URL
@@ -11,7 +13,7 @@ def fetchUrlContent(url_extension):
     # CONVERTING PLAIN CONTENT TO HTML CONTENT
     htmlContent = plainContent.content
 
-    # PARSING HTML CONTENT
+    # PARSING HTML CONTENT INTO SOUP
     soup = BeautifulSoup(htmlContent, 'html.parser')
 
     # RETURNING WHOLE CONTENT
@@ -22,7 +24,7 @@ def fetchUrlContent(url_extension):
 def findElementsInfo(group):
 
     # URL EXTENSION TO NAVIGATE IN GROUPS
-    route_to_group = "/forums/index-" + str(group.lower())
+    route_to_group = "/forums/index-" + str(group)
 
     # CALLING FUNCTION TO GRAB PAGE CONTENT
     soup = fetchUrlContent(route_to_group)
@@ -42,17 +44,30 @@ def findElementsInfo(group):
         # COUNTER INCREMENT
         i += 1
 
-        # GETTING NO. OF PAGES OF EACH ELEMENT OF GROUP
+        # GETTING LINKS OF EACH ELEMENT OF GROUP
         route_to_element = anchor.get("href")
 
-        # CALLING FUNCTION TO BROWSE TO THE ELEMENT PAGE
+        # NAVIGATING TO THE ABOVE FETCHED LINK TO GRAB PAGE COUNT INFORMATION (RE-CALLING fetchUrlContent FUNCTION)
+        # BECAUSE THE PAGES INFORMATION IS IN NESTED PAGE
         soup = fetchUrlContent(route_to_element)
+
+        # GETTING ACTUAL LINK WHICH LEADS TO THE DISEASE DISCUSSION
+        link_to_discussion = soup.find('a', attrs={"class": "reply__control reply-ctrl-last link"})
+
+        # IF LINK EXISTS
+        if(link_to_discussion):
+            link_to_discussion = link_to_discussion.get("href")
+
+        # IF LINK DOESN'T EXIST
+        else:
+            link_to_discussion = "no-link"
 
         # GETTING HTML ELEMENT THAT CONTAIN PAGES COUNT
         get_pages_count = soup.find('select', attrs={"name": "page"})
 
         if(get_pages_count):
-            # GRABBING PAGE COUNT
+
+            # GRABBING PAGE COUNT FROM HTML ELEMENT
             get_pages_count.find('option')
             page_count = get_pages_count.text
             page_count = page_count.rsplit('/')[-1]
@@ -64,18 +79,29 @@ def findElementsInfo(group):
         data = {
                  'id': i,
                  'title': anchor.text,
-                 'link': base_url + route_to_element,
+                 'link': link_to_discussion,
                  'pages': page_count
                 }
 
         # APPENDING DICTIONARY TO LIST OF ELEMENTS
         anchorsList.append(data)
 
-    # PRINTING-OUT THE LIST OF ELEMENTS
-    # print(anchorsList)
+    # MAKE DIRECTORY OF EACH GROUP IF DOES'NT EXIST
+    new_dir = 'group_' + group
+    if not os.path.exists(new_dir):
+        os.makedirs(new_dir)
 
-    # RETURNING LIST OF ELEMENTS
-    return anchorsList
+    # CREATING PATH WHERE TO SAVE DATASET
+    file_path = new_dir + '/' + group + '_diseases_dataset.json'
+
+    # WRITING JSON FILE OF EACH GROUP TO THE RESPECTIVE DIRECTORY
+    with open(file_path, 'w') as f:
+        json_formatted_str = json.dumps(anchorsList, indent=4)
+        f.write(json_formatted_str)
+
+    print("")
+    print("Task Completed Successfully!")
+    print("For results please navigate to this directory. [/" + file_path + "]")
 
 
 # BASE URL OF MAIN SITE
@@ -85,12 +111,4 @@ base_url = "https://patient.info"
 group = input("Enter alphabet of group you want to search: ")
 
 # START SCRAPING
-elements_of_groups = findElementsInfo(group)
-
-# WRITING CSV
-from csv import DictWriter
-
-with open('dataset.csv', 'w') as outfile:
-    writer = DictWriter(outfile, ('id', 'title', 'pages', 'link'))
-    writer.writeheader()
-    writer.writerows(elements_of_groups)
+findElementsInfo(group.lower())
