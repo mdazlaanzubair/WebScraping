@@ -51,29 +51,32 @@ def findElementsInfo(group):
         # BECAUSE THE PAGES INFORMATION IS IN NESTED PAGE
         soup = fetchUrlContent(route_to_element)
 
-        # GETTING ACTUAL LINK WHICH LEADS TO THE DISEASE DISCUSSION
-        link_to_discussion = soup.find('a', attrs={"class": "reply__control reply-ctrl-last link"})
-
-        # IF LINK EXISTS
-        if(link_to_discussion):
-            link_to_discussion = link_to_discussion.get("href")
-
-        # IF LINK DOESN'T EXIST
-        else:
-            link_to_discussion = "no-link"
-
-        # GETTING HTML ELEMENT THAT CONTAIN PAGES COUNT
+        # GETTING HTML ELEMENT THAT CONTAIN PAGES COUNT OF DISCUSSION PAGES
         get_pages_count = soup.find('select', attrs={"name": "page"})
 
-        if(get_pages_count):
+        # IF WE GOT THE ELEMENT ABOVE JUST EXTRACT THE PAGE COUNT AND GRAB THE DISCUSSION LINK
+        if get_pages_count:
 
-            # GRABBING PAGE COUNT FROM HTML ELEMENT
+            # EXTRACTING PAGE COUNT FROM HTML ELEMENT
             get_pages_count.find('option')
             page_count = get_pages_count.text
             page_count = page_count.rsplit('/')[-1]
             page_count = page_count.replace('\n', '')
+
+            # GETTING ELEMENT THAT CONTAIN DISCUSSION LINK OF DEMANDED DISEASE
+            link_to_discussion = soup.find('a', attrs={"class": "reply__control reply-ctrl-last link"})
+
+            # EXTRACTING LINK FROM THE ABOVE ELEMENT AND SET IT INTO A VARIABLE
+            link_to_discussion = link_to_discussion.get("href")
+
+        # IF WE DIDN'T GOT THE ELEMENT ABOVE JUST SET THE PAGE COUNT AND DISCUSSION LINK MANUALLY
         else:
-            page_count = "0"
+
+            # IF THERE IS NO PAGE COUNT THEN DEFINITELY THERE IS ONE PAGE
+            page_count = "1"
+
+            # EXTRACTING LINK FROM THE ABOVE ELEMENT AND SET IT INTO A VARIABLE
+            link_to_discussion = base_url + route_to_element
 
         # CREATING DICTIONARY OF EACH GROUP ELEMENT SEPARATELY
         data = {
