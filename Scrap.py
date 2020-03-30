@@ -95,7 +95,7 @@ def findElementsInfo(group):
         os.makedirs(new_dir)
 
     # CREATING PATH WHERE TO SAVE DATASET
-    file_path = new_dir + '/' + group + '_diseases_dataset.json'
+    file_path = new_dir + '/group_' + group + '_diseases_dataset.json'
 
     # WRITING JSON FILE OF EACH GROUP TO THE RESPECTIVE DIRECTORY
     with open(file_path, 'w') as f:

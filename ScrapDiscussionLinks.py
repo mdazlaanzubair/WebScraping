@@ -11,7 +11,7 @@ def datasetFinder(disease):
     group = disease[:1]
 
     # CREATING PATH TO FILE WHICH CONTAIN USER DEMANDED DISEASE DATA
-    disease_dir = 'group_' + group + '/' + group + '_diseases_dataset.json'
+    disease_dir = 'group_' + group + '/group_' + group + '_diseases_dataset.json'
 
     # IF THE DIRECTORY OF DEMANDED DISEASE DOESN'T EXIST
     if not os.path.exists(disease_dir):
@@ -123,7 +123,6 @@ def scrapdiscussionDisease(disease):
 
                 # APPENDING DICTIONARY TO LIST OF DISCUSSIONS
                 discussionHolder.append(data)
-
 
     # IF DISCUSSION PAGE HAVE MULTIPLE PAGES JUST LOOP THROUGH IT
     else:

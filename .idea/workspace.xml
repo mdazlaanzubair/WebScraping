@@ -5,8 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scrap.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrap.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ScrapDiscussionLinks.py" beforeDir="false" afterPath="$PROJECT_DIR$/ScrapDiscussionLinks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/group_a/a_diseases_dataset.json" beforeDir="false" afterPath="$PROJECT_DIR$/group_a/a_diseases_dataset.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/group_x/x_diseases_dataset.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/group_a/a_diseases_dataset.json" beforeDir="false" afterPath="$PROJECT_DIR$/group_a/group_a_diseases_dataset.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/group_b/b_diseases_dataset.json" beforeDir="false" afterPath="$PROJECT_DIR$/group_b/group_b_diseases_dataset.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/group_y/y_diseases_dataset.json" beforeDir="false" afterPath="$PROJECT_DIR$/group_y/group_y_diseases_dataset.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +39,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.ScrapDiscussionLinks">
+  <component name="RunManager" selected="Python.ScrapAllDiscussions">
     <configuration name="Scrap" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="WebScraper" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -52,6 +53,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scrap.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ScrapAllDiscussions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="WebScraper" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ScrapAllDiscussions.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -83,6 +105,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ScrapAllDiscussions" />
         <item itemvalue="Python.ScrapDiscussionLinks" />
         <item itemvalue="Python.Scrap" />
       </list>
@@ -114,30 +137,30 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1579" height="295" key="GridCell.Tab.0.bottom" timestamp="1585563520087">
+    <state width="1579" height="295" key="GridCell.Tab.0.bottom" timestamp="1585570717937">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state width="1579" height="308" key="GridCell.Tab.0.bottom/0.0.1600.870/-1366.0.1366.738@0.0.1600.870" timestamp="1584449241505" />
     <state width="1579" height="308" key="GridCell.Tab.0.bottom/0.0.1600.870/1600.0.1366.738@0.0.1600.870" timestamp="1584452546077" />
-    <state width="1579" height="295" key="GridCell.Tab.0.bottom/0.0.1600.870@0.0.1600.870" timestamp="1585563520087" />
-    <state width="1579" height="295" key="GridCell.Tab.0.center" timestamp="1585563520087">
+    <state width="1579" height="295" key="GridCell.Tab.0.bottom/0.0.1600.870@0.0.1600.870" timestamp="1585570717937" />
+    <state width="1579" height="295" key="GridCell.Tab.0.center" timestamp="1585570717937">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state width="1579" height="308" key="GridCell.Tab.0.center/0.0.1600.870/-1366.0.1366.738@0.0.1600.870" timestamp="1584449241505" />
     <state width="1579" height="308" key="GridCell.Tab.0.center/0.0.1600.870/1600.0.1366.738@0.0.1600.870" timestamp="1584452546077" />
-    <state width="1579" height="295" key="GridCell.Tab.0.center/0.0.1600.870@0.0.1600.870" timestamp="1585563520087" />
-    <state width="1579" height="295" key="GridCell.Tab.0.left" timestamp="1585563520087">
+    <state width="1579" height="295" key="GridCell.Tab.0.center/0.0.1600.870@0.0.1600.870" timestamp="1585570717937" />
+    <state width="1579" height="295" key="GridCell.Tab.0.left" timestamp="1585570717937">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state width="1579" height="308" key="GridCell.Tab.0.left/0.0.1600.870/-1366.0.1366.738@0.0.1600.870" timestamp="1584449241505" />
     <state width="1579" height="308" key="GridCell.Tab.0.left/0.0.1600.870/1600.0.1366.738@0.0.1600.870" timestamp="1584452546077" />
-    <state width="1579" height="295" key="GridCell.Tab.0.left/0.0.1600.870@0.0.1600.870" timestamp="1585563520087" />
-    <state width="1579" height="295" key="GridCell.Tab.0.right" timestamp="1585563520087">
+    <state width="1579" height="295" key="GridCell.Tab.0.left/0.0.1600.870@0.0.1600.870" timestamp="1585570717937" />
+    <state width="1579" height="295" key="GridCell.Tab.0.right" timestamp="1585570717937">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state width="1579" height="308" key="GridCell.Tab.0.right/0.0.1600.870/-1366.0.1366.738@0.0.1600.870" timestamp="1584449241505" />
     <state width="1579" height="308" key="GridCell.Tab.0.right/0.0.1600.870/1600.0.1366.738@0.0.1600.870" timestamp="1584452546077" />
-    <state width="1579" height="295" key="GridCell.Tab.0.right/0.0.1600.870@0.0.1600.870" timestamp="1585563520087" />
+    <state width="1579" height="295" key="GridCell.Tab.0.right/0.0.1600.870@0.0.1600.870" timestamp="1585570717937" />
     <state x="301" y="78" key="SettingsEditor" timestamp="1584380746031">
       <screen x="0" y="0" width="1600" height="870" />
     </state>

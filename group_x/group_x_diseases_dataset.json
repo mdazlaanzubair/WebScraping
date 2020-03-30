@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "X Rays",
+        "link": "https://patient.info/forums/discuss/browse/investigations-and-procedures-3432?page=1#group-discussions",
+        "pages": "4"
+    },
+    {
+        "id": 2,
+        "title": "Xenical",
+        "link": "https://patient.info/forums/discuss/browse/orlistat-3027?page=1#group-discussions",
+        "pages": "65"
+    },
+    {
+        "id": 3,
+        "title": "Xipamide",
+        "link": "https://patient.info/forums/discuss/browse/hypertension-1080?page=1#group-discussions",
+        "pages": "26"
+    },
+    {
+        "id": 4,
+        "title": "XLP - X-Linked Lymphoproliferative Syndrome",
+        "link": "https://patient.info/forums/discuss/browse/haematological-disorders-1114?page=1#group-discussions",
+        "pages": "8"
+    },
+    {
+        "id": 5,
+        "title": "XXY and other SCAs",
+        "link": "https://patient.info/forums/discuss/browse/sex-chromosome-aneuploidies-3347?page=1#group-discussions",
+        "pages": "3"
+    }
+]
