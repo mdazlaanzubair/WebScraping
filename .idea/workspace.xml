@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1909453f-b901-49a2-b220-b2970f213200" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scrap.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrap.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScrapDiscussionLinks.py" beforeDir="false" afterPath="$PROJECT_DIR$/ScrapDiscussionLinks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/group_a/a_diseases_dataset.json" beforeDir="false" afterPath="$PROJECT_DIR$/group_a/group_a_diseases_dataset.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/group_b/b_diseases_dataset.json" beforeDir="false" afterPath="$PROJECT_DIR$/group_b/group_b_diseases_dataset.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/group_y/y_diseases_dataset.json" beforeDir="false" afterPath="$PROJECT_DIR$/group_y/group_y_diseases_dataset.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
